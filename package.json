@@ -1,0 +1,23 @@
+{
+  "name": "service-manager",
+  "version": "1.0.0",
+  "description": "A simple service manager",
+  "main": "lib/service-manager.js",
+  "scripts": {
+    "test": "mocha --recursive ./test/spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aerisweather/service-manager.git"
+  },
+  "keywords": [
+    "service",
+    "manager"
+  ],
+  "author": "Edan Schwartz <edanschwartz@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aerisweather/service-manager/issues"
+  },
+  "homepage": "https://github.com/aerisweather/service-manager#readme"
+}
