@@ -20,6 +20,9 @@
     "url": "https://github.com/aerisweather/service-manager/issues"
   },
   "homepage": "https://github.com/aerisweather/service-manager#readme",
+  "engines": {
+    "node": "^4.2.1"
+  },
   "dependencies": {
     "lodash": "^3.10.1"
   },
