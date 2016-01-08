@@ -1,5 +1,5 @@
 {
-  "name": "service-manager",
+  "name": "simple-service-manager",
   "version": "1.0.0",
   "description": "A simple service manager",
   "main": "lib/service-manager.js",
