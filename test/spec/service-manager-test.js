@@ -225,4 +225,18 @@ describe('ServiceManager', function() {
 
 	});
 
+	describe('instance', function() {
+
+		it('should return an already initialized instance', function() {
+		  ServiceManager.initialize({
+				fooService: () => ({ foo: 'bar' })
+			});
+
+			const serviceManager = ServiceManager.instance();
+
+			assert.deepStrictEqual(serviceManager.get('fooService'), { foo: 'bar' });
+		});
+
+	});
+
 });
