@@ -8,11 +8,11 @@ A pretty simple service manager.
 `ServiceManager` is hosted on npm:
 
 ```
-npm install ServiceManager
+npm install simple-service-manager
 ```
 
 ```
-const ServiceManager = require('service-manager');
+const ServiceManager = require('simple-service-manager');
 ```
 
 ## Usage
