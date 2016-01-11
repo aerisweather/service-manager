@@ -65,7 +65,7 @@ myComponent.emit('update');
 
 ```js
 const FooModel = require('../lib/model/foo');
-const serviceManager = require('service-manager').instance();
+const serviceManager = require('simple-service-manager').instance();
 const sinon = require('sinon');
 const assert = require('assert');
 
