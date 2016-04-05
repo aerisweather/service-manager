@@ -198,7 +198,7 @@ describe('ServiceManager', function() {
 
 	describe('reinitialize', function() {
 
-		it('should reset all services all services', function() {
+		it('should reset all services', function() {
 			var fooCounter = 0, barCounter = 0;
 			const serviceManager = new ServiceManager({
 				fooService: () => {
