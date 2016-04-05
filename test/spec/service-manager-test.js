@@ -223,6 +223,32 @@ describe('ServiceManager', function() {
 				'creates bar for the first time');
 		});
 
+		it('should reset a list of services', function() {
+			const factories = {
+				fooService: sinon.spy(() => 'foo'),
+				barService: sinon.spy(() => 'bar'),
+				quxService: sinon.spy(() => 'qux')
+			};
+      const serviceManager = new ServiceManager(factories)
+
+			// Initialize all services
+			serviceManager.get('fooService');
+			serviceManager.get('barService');
+			serviceManager.get('quxService');
+
+			// Reinitialize foo & bar services
+			serviceManager.reinitialize(['fooService', 'barService']);
+
+			// Grab services again
+			serviceManager.get('fooService');
+			serviceManager.get('barService');
+			serviceManager.get('quxService');
+
+			assert.strictEqual(factories.fooService.callCount, 2, 'fooService factory called x2');
+			assert.strictEqual(factories.barService.callCount, 2, 'barService factory called x2');
+			assert.strictEqual(factories.quxService.callCount, 1, 'quxService factory called x1');
+		});
+
 	});
 
 	describe('instance', function() {
